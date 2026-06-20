@@ -1,51 +1,59 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr" class="scroll-smooth">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     <!-- SEO Meta Tags -->
     <title>Features - LoveScript | Automated WhatsApp Invitations & RSVP Tracker</title>
-    <meta name="description" content="Explore LoveScript features. Discover how our digital invitation platform automates WhatsApp invitations, tracks real-time RSVPs, manages guests, and secures event entry with barcodes.">
-    <meta name="keywords" content="whatsapp wedding invitation, online rsvp tracker, guest list manager, entry barcode scan, digital event checklist, lovescript features">
-    
-    <link rel="canonical" href="https://lovescript.online/features">
-    
+    <meta name="description"
+        content="Explore LoveScript features. Discover how our digital invitation platform automates WhatsApp invitations, tracks real-time RSVPs, manages guests, and secures event entry with barcodes.">
+    <meta name="keywords"
+        content="whatsapp wedding invitation, online rsvp tracker, guest list manager, entry barcode scan, digital event checklist, lovescript features">
+
+    <link rel="canonical" href="https://woow-invites.vercel.app/features">
+
     <!-- Prefetch adjacent pages for instant loading -->
     <link rel="prefetch" href="index.html">
     <link rel="prefetch" href="pricing.html">
     <link rel="prefetch" href="contact.html">
-    
+
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
-    
+
     <!-- Alpine.js for interactions -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
+
 <body x-data="{ mobileMenuOpen: false, scrolled: false }" @scroll.window="scrolled = (window.pageYOffset > 20)">
-    
+
     <!-- Page Loader -->
     <div id="page-loader">
         <div class="loader-container">
-             <div class="loader-ripple"></div>
-             <div class="loader-ripple"></div>
-             <div class="loader-ripple"></div>
-             <div class="loader-spinner-elegant"></div>
-             <div class="loader-logo" style="width: auto !important; display: flex; align-items: center; gap: 0.75rem; filter: drop-shadow(0 10px 15px rgba(245, 158, 11, 0.25)); border: none; background: transparent;">
-                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="var(--accent-gold)" style="width: 3.5rem; height: 3.5rem;">
-                     <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-                 </svg>
-                 <span style="font-family: var(--font-heading); font-size: 2.5rem; font-weight: 500; color: var(--text-primary); letter-spacing: -0.02em; line-height: 1;">LoveScript</span>
-             </div>
-             <div class="loader-text">
-                 LOVE SCRIPT <span>.</span><span>.</span><span>.</span>
-             </div>
+            <div class="loader-ripple"></div>
+            <div class="loader-ripple"></div>
+            <div class="loader-ripple"></div>
+            <div class="loader-spinner-elegant"></div>
+            <div class="loader-logo"
+                style="width: auto !important; display: flex; align-items: center; gap: 0.75rem; filter: drop-shadow(0 10px 15px rgba(245, 158, 11, 0.25)); border: none; background: transparent;">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="var(--accent-gold)"
+                    style="width: 3.5rem; height: 3.5rem;">
+                    <path
+                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                </svg>
+                <span
+                    style="font-family: var(--font-heading); font-size: 2.5rem; font-weight: 500; color: var(--text-primary); letter-spacing: -0.02em; line-height: 1;">LoveScript</span>
+            </div>
+            <div class="loader-text">
+                LOVE SCRIPT <span>.</span><span>.</span><span>.</span>
+            </div>
         </div>
     </div>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const loader = document.getElementById('page-loader');
-            if(loader) loader.classList.add('hidden-loader');
+            if (loader) loader.classList.add('hidden-loader');
         });
     </script>
 
@@ -59,10 +67,13 @@
             <!-- Logo -->
             <a href="index.html" class="logo-link" aria-label="LoveScript - Home">
                 <div class="logo-wrapper" style="display: flex; align-items: center; gap: 0.5rem;">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="var(--accent-gold)" style="width: 2rem; height: 2rem; flex-shrink: 0;">
-                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="var(--accent-gold)"
+                        style="width: 2rem; height: 2rem; flex-shrink: 0;">
+                        <path
+                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
                     </svg>
-                    <span style="font-family: var(--font-heading); font-size: 1.625rem; font-weight: 500; color: var(--text-primary); letter-spacing: -0.02em; line-height: 1;">LoveScript</span>
+                    <span
+                        style="font-family: var(--font-heading); font-size: 1.625rem; font-weight: 500; color: var(--text-primary); letter-spacing: -0.02em; line-height: 1;">LoveScript</span>
                 </div>
             </a>
 
@@ -76,15 +87,17 @@
 
             <!-- Actions -->
             <div class="nav-actions">
-                <a href="https://lovescript.online/login" class="btn-login">Login</a>
-                <a href="https://lovescript.online/register" class="btn-primary btn-cta-pulse">Get Started</a>
+                <a href="https://woow-invites.vercel.app/login" class="btn-login">Login</a>
+                <a href="https://woow-invites.vercel.app/register" class="btn-primary btn-cta-pulse">Get Started</a>
             </div>
 
             <!-- Mobile Menu Button -->
             <button @click="mobileMenuOpen = !mobileMenuOpen" class="mobile-menu-btn" aria-label="Toggle Menu">
                 <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path x-show="!mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                    <path x-show="mobileMenuOpen" x-cloak stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    <path x-show="!mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16" />
+                    <path x-show="mobileMenuOpen" x-cloak stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                 </svg>
             </button>
         </div>
@@ -98,15 +111,15 @@
                 <a href="pricing.html" @click="mobileMenuOpen = false">Pricing</a>
                 <a href="contact.html" @click="mobileMenuOpen = false">Contact Us</a>
             </div>
-            
+
             <!-- Auth Buttons -->
             <div class="mobile-auth">
-                <a href="https://lovescript.online/login" class="mobile-login">Login</a>
-                <a href="https://lovescript.online/register" class="mobile-start">Get Started</a>
+                <a href="https://woow-invites.vercel.app/login" class="mobile-login">Login</a>
+                <a href="https://woow-invites.vercel.app/register" class="mobile-start">Get Started</a>
             </div>
         </div>
     </nav>
-    
+
     <!-- Content -->
     <main>
         <!-- Page Title Banner -->
@@ -114,7 +127,8 @@
             <div class="container">
                 <div class="banner-glow-1"></div>
                 <h1>Everything You Need to Host the Perfect Event</h1>
-                <p>Powerful integrated tools designed to make planning and managing your event invitations easy and stress-free.</p>
+                <p>Powerful integrated tools designed to make planning and managing your event invitations easy and
+                    stress-free.</p>
             </div>
         </div>
 
@@ -122,114 +136,136 @@
         <div class="py-20 bg-white" style="padding: 5rem 0;">
             <div class="container">
                 <div class="features-grid" id="features-grid">
-                    
+
                     <!-- WhatsApp (Feature 1) -->
                     <div class="feature-card feature-box wa-feat visible">
                         <div class="feature-icon-wrapper">
                             <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                             </svg>
                         </div>
                         <h3>Smart WhatsApp Invitations</h3>
-                        <p>Deliver digital invitations directly to guests via WhatsApp with customized messages and interactive buttons for instant RSVP collection.</p>
+                        <p>Deliver digital invitations directly to guests via WhatsApp with customized messages and
+                            interactive buttons for instant RSVP collection.</p>
                     </div>
 
                     <!-- RSVP (Feature 2) -->
                     <div class="feature-card feature-box rem-feat visible">
                         <div class="feature-icon-wrapper">
                             <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
                         </div>
                         <h3>Real-time RSVP Tracking</h3>
-                        <p>Monitor confirmations instantly: attending, apologized, or no response—with all updates synced live to your dashboard.</p>
+                        <p>Monitor confirmations instantly: attending, apologized, or no response—with all updates
+                            synced live to your dashboard.</p>
                     </div>
 
                     <!-- Guest Management (Feature 3) -->
                     <div class="feature-card feature-box sec-feat visible">
                         <div class="feature-icon-wrapper">
                             <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
                             </svg>
                         </div>
                         <h3>Guest List Management</h3>
-                        <p>Import thousands of guests in seconds with Excel spreadsheet uploads, group contacts, and dispatch campaigns smoothly.</p>
+                        <p>Import thousands of guests in seconds with Excel spreadsheet uploads, group contacts, and
+                            dispatch campaigns smoothly.</p>
                     </div>
 
                     <!-- QR Code (Feature 4) -->
                     <div class="feature-card feature-box stats-feat visible">
                         <div class="feature-icon-wrapper">
                             <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 14.5l-3.197.618C8.136 15.247 7.5 15.69 7.5 16.32v.512c0 1.258 1.488 2.056 2.583 1.55l3.873-1.8c.874-.406 1.156-1.553.51-2.146l-1.922-1.782z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 14.5l-3.197.618C8.136 15.247 7.5 15.69 7.5 16.32v.512c0 1.258 1.488 2.056 2.583 1.55l3.873-1.8c.874-.406 1.156-1.553.51-2.146l-1.922-1.782z" />
                             </svg>
                         </div>
                         <h3>Smart Barcode / QR Check-in</h3>
-                        <p>Generate a unique entry QR code for each guest to simplify entrance security and eliminate door congestion.</p>
+                        <p>Generate a unique entry QR code for each guest to simplify entrance security and eliminate
+                            door congestion.</p>
                     </div>
 
                     <!-- Reminders (Feature 5) -->
                     <div class="feature-card feature-box rem-feat visible">
                         <div class="feature-icon-wrapper">
                             <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
                             </svg>
                         </div>
                         <h3>Automated Reminders</h3>
-                        <p>Configure automated reminders via WhatsApp to nudging guests who haven't responded, maximizing RSVPs.</p>
+                        <p>Configure automated reminders via WhatsApp to nudging guests who haven't responded,
+                            maximizing RSVPs.</p>
                     </div>
 
                     <!-- Designs (Feature 6) -->
                     <div class="feature-card feature-box wa-feat visible">
                         <div class="feature-icon-wrapper">
                             <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                             </svg>
                         </div>
                         <h3>Premium Digital Collections</h3>
-                        <p>Exquisite, animated card templates ready for editing, or simply upload your custom graphic design in one click.</p>
+                        <p>Exquisite, animated card templates ready for editing, or simply upload your custom graphic
+                            design in one click.</p>
                     </div>
 
                     <!-- Calendar (Feature 7) -->
                     <div class="feature-card feature-box sec-feat visible">
                         <div class="feature-icon-wrapper">
                             <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                             </svg>
                         </div>
                         <h3>Add to Calendar Integration</h3>
-                        <p>Enable guests to save event dates and times in their phone calendar (Apple Calendar, Google Calendar) with one tap.</p>
+                        <p>Enable guests to save event dates and times in their phone calendar (Apple Calendar, Google
+                            Calendar) with one tap.</p>
                     </div>
 
                     <!-- Location (Feature 8) -->
                     <div class="feature-card feature-box rem-feat visible">
                         <div class="feature-icon-wrapper">
                             <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                             </svg>
                         </div>
                         <h3>Google Maps Navigation</h3>
-                        <p>Embed the exact geographical link of your venue in the invitation, letting guests navigate directly and stress-free.</p>
+                        <p>Embed the exact geographical link of your venue in the invitation, letting guests navigate
+                            directly and stress-free.</p>
                     </div>
 
                     <!-- Reports (Feature 9) -->
                     <div class="feature-card feature-box stats-feat visible">
                         <div class="feature-icon-wrapper">
                             <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                             </svg>
                         </div>
                         <h3>Analytical Reports</h3>
-                        <p>Export detailed attendance tables to coordinate catering menus and venue hospitality arrangements perfectly.</p>
+                        <p>Export detailed attendance tables to coordinate catering menus and venue hospitality
+                            arrangements perfectly.</p>
                     </div>
 
                 </div>
 
                 <!-- Navigation link to pricing page -->
                 <div class="feature-card-cta" style="margin-top: 5rem;">
-                    <a href="pricing.html" class="btn-cta-primary btn-cta-pulse" style="display:inline-flex; align-items:center; gap:0.5rem;">
+                    <a href="pricing.html" class="btn-cta-primary btn-cta-pulse"
+                        style="display:inline-flex; align-items:center; gap:0.5rem;">
                         Choose the Perfect Plan for Your Event
                         <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M14 5l7 7m0 0l-7 7m7-7H3" />
                         </svg>
                     </a>
                 </div>
@@ -242,16 +278,19 @@
         <div class="container footer-grid">
             <div class="footer-brand">
                 <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="var(--accent-gold)" style="width: 2rem; height: 2rem; flex-shrink: 0;">
-                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="var(--accent-gold)"
+                        style="width: 2rem; height: 2rem; flex-shrink: 0;">
+                        <path
+                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
                     </svg>
-                    <span style="font-family: var(--font-heading); font-size: 1.625rem; font-weight: 500; color: var(--text-primary); letter-spacing: -0.02em; line-height: 1;">LoveScript</span>
+                    <span
+                        style="font-family: var(--font-heading); font-size: 1.625rem; font-weight: 500; color: var(--text-primary); letter-spacing: -0.02em; line-height: 1;">LoveScript</span>
                 </div>
                 <p>
                     Making event planning simple, elegant, and stress-free for everyone.
                 </p>
             </div>
-            
+
             <div class="footer-links-col">
                 <h4>Love Script Platform</h4>
                 <ul>
@@ -259,7 +298,7 @@
                     <li><a href="pricing.html">Pricing</a></li>
                 </ul>
             </div>
-            
+
             <div class="footer-links-col">
                 <h4>Company</h4>
                 <ul>
@@ -269,7 +308,7 @@
                 </ul>
             </div>
         </div>
-        
+
         <div class="container footer-bottom">
             <div class="footer-copy">
                 <p>&copy; 2026 Love Script. All rights reserved.</p>
@@ -279,13 +318,14 @@
     </footer>
 
     <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/966567714764" target="_blank" class="whatsapp-floating-btn" aria-label="Contact us on WhatsApp">
-         <img src="https://da3wa.online/images/whatsappwhite.svg" alt="WhatsApp">
+    <a href="https://wa.me/966567714764" target="_blank" class="whatsapp-floating-btn"
+        aria-label="Contact us on WhatsApp">
+        <img src="https://da3wa.online/images/whatsappwhite.svg" alt="WhatsApp">
     </a>
 
     <!-- Scroll Slide-Up Intersect Script -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const observerOptions = {
                 root: null,
                 rootMargin: '0px',
@@ -307,4 +347,5 @@
         });
     </script>
 </body>
+
 </html>
