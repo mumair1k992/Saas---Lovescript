@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- SEO Meta Tags -->
+    <title>LoveScript - Premium Digital Invitations & RSVP Tracker</title>
+    <meta name="description" content="Create premium digital wedding invitations and online event invites with LoveScript. Automate RSVP tracking, guest management, and entry barcodes via WhatsApp.">
+    <meta name="keywords" content="digital wedding invitations, online invitation card, whatsapp save the date, rsvp tracker, entry barcode, digital invitation saudi arabia, lovescript, event check-in">
+    
+    <link rel="canonical" href="https://lovescript.online">
+    
+    <!-- Prefetch adjacent pages for instant loading -->
+    <link rel="prefetch" href="features.html">
+    <link rel="prefetch" href="pricing.html">
+    <link rel="prefetch" href="contact.html">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Alpine.js for interactions -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body x-data="{ mobileMenuOpen: false, scrolled: false }" @scroll.window="scrolled = (window.pageYOffset > 20)">
+    
+    <!-- Page Loader -->
+    <div id="page-loader">
+        <div class="loader-container">
+             <div class="loader-ripple"></div>
+             <div class="loader-ripple"></div>
+             <div class="loader-ripple"></div>
+             <div class="loader-spinner-elegant"></div>
+             <div class="loader-logo" style="width: auto !important; display: flex; align-items: center; gap: 0.75rem; filter: drop-shadow(0 10px 15px rgba(245, 158, 11, 0.25)); border: none; background: transparent;">
+                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="var(--accent-gold)" style="width: 3.5rem; height: 3.5rem;">
+                     <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                 </svg>
+                 <span style="font-family: var(--font-heading); font-size: 2.5rem; font-weight: 500; color: var(--text-primary); letter-spacing: -0.02em; line-height: 1;">LoveScript</span>
+             </div>
+             <div class="loader-text">
+                 LOVE SCRIPT <span>.</span><span>.</span><span>.</span>
+             </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const loader = document.getElementById('page-loader');
+            if(loader) loader.classList.add('hidden-loader');
+        });
+    </script>
+
+    <!-- Background Texture -->
+    <div class="fixed-bg-texture"></div>
+    <div class="fixed-bg-color"></div>
+
+    <!-- Navbar -->
+    <nav :class="{ 'scrolled': scrolled }">
+        <div class="nav-container">
+            <!-- Logo -->
+            <a href="index.html" class="logo-link" aria-label="LoveScript - Home">
+                <div class="logo-wrapper" style="display: flex; align-items: center; gap: 0.5rem;">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="var(--accent-gold)" style="width: 2rem; height: 2rem; flex-shrink: 0;">
+                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                    </svg>
+                    <span style="font-family: var(--font-heading); font-size: 1.625rem; font-weight: 500; color: var(--text-primary); letter-spacing: -0.02em; line-height: 1;">LoveScript</span>
+                </div>
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="desktop-menu">
+                <a href="index.html">Home</a>
+                <a href="features.html">Features</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+
+            <!-- Actions -->
+            <div class="nav-actions">
+                <a href="https://lovescript.online/login" class="btn-login">Login</a>
+                <a href="https://lovescript.online/register" class="btn-primary btn-cta-pulse">Get Started</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button @click="mobileMenuOpen = !mobileMenuOpen" class="mobile-menu-btn" aria-label="Toggle Menu">
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path x-show="!mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    <path x-show="mobileMenuOpen" x-cloak stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div x-show="mobileMenuOpen" x-cloak class="mobile-menu-dropdown">
+            <!-- Menu Links -->
+            <div class="mobile-links">
+                <a href="index.html" @click="mobileMenuOpen = false">Home</a>
+                <a href="features.html" @click="mobileMenuOpen = false">Features</a>
+                <a href="pricing.html" @click="mobileMenuOpen = false">Pricing</a>
+                <a href="contact.html" @click="mobileMenuOpen = false">Contact Us</a>
+            </div>
+            
+            <!-- Auth Buttons -->
+            <div class="mobile-auth">
+                <a href="https://lovescript.online/login" class="mobile-login">Login</a>
+                <a href="https://lovescript.online/register" class="mobile-start">Get Started</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-bg-blobs">
+                <div class="blob-1"></div>
+                <div class="blob-2"></div>
+            </div>
+
+            <div class="container hero-grid">
+                <!-- Hero Content -->
+                <div class="hero-content">
+                    <!-- Badge -->
+                    <div class="hero-badge">
+                        <span class="ping-dot">
+                            <span class="ping-effect"></span>
+                            <span class="solid-dot"></span>
+                        </span>
+                        #1 Choice for Events Globally
+                        <img src="https://flagcdn.com/w40/us.png" alt="United States">
+                    </div>
+
+                    <!-- Main Headline -->
+                    <h1>
+                        Your Event Invitation..<br>
+                        <span class="gradient-text">Easier, Elegant & Smart</span>
+                    </h1>
+
+                    <!-- Subheadline -->
+                    <p>
+                        Send beautiful invitations via WhatsApp, track your guests' RSVPs in real time, and manage entry check-in with smart barcodes.
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="hero-cta">
+                        <a href="https://lovescript.online/register" class="btn-cta-primary btn-cta-pulse">
+                            Create Your Event Now
+                            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </a>
+                        <a href="#features" class="btn-cta-secondary">
+                            Explore Features
+                        </a>
+                    </div>
+                   
+                    <!-- Trust Indicators -->
+                    <div class="hero-trust">
+                        <div class="trust-item">
+                            <svg class="text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>+4,000 Events</span>
+                        </div>
+                        <div class="trust-item">
+                            <svg class="text-gold-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <span>Rating 4.9/5</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Visual (Dynamic Animation) -->
+                <div class="hero-visual">
+                    <div class="visual-glow"></div>
+                    
+                    <div class="floating-container">
+                        <!-- Card 1: WhatsApp sent slider (Top Right) -->
+                        <div class="float-card-1" x-data="{ 
+                            names: ['James', 'Sarah', 'Alex', 'Emily', 'David', 'Jessica'], 
+                            idx: 0 
+                        }" x-init="setInterval(() => { idx = (idx + 1) % names.length }, 2500)">
+                            <div class="animate-hero-float-1">
+                                <div class="whatsapp-sim-card">
+                                    <div class="wa-icon">
+                                        <img src="https://da3wa.online/images/whatsappicon.svg" alt="WhatsApp">
+                                    </div>
+                                    <div class="wa-details">
+                                        <div class="wa-header">WhatsApp</div>
+                                        <div class="wa-text">
+                                            Sending to <span x-text="names[idx]"></span>...
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2: RSVP confirmation loop (Middle Left) -->
+                        <div class="float-card-2" x-data="{ 
+                            list: [
+                                {'name':'Sarah','status':'confirmed','guests':'3 guests','sub':'✨ RSVP Confirmed'},
+                                {'name':'Alex','status':'apologized','guests':'Apologized','sub':'We wish them well'},
+                                {'name':'Emily','status':'confirmed','guests':'2 guests','sub':'✨ RSVP Confirmed'},
+                                {'name':'David','status':'confirmed','guests':'1 guest','sub':'✨ RSVP Confirmed'},
+                                {'name':'Jessica','status':'apologized','guests':'Apologized','sub':'We wish them well'}
+                            ], 
+                            curr: 0 
+                        }" x-init="setInterval(() => { curr = (curr + 1) % list.length }, 3000)">
+                            <div class="animate-hero-float-2">
+                                 <div class="rsvp-sim-card">
+                                     <!-- Dynamic Icon based on Status -->
+                                     <div class="rsvp-status-icon" :class="list[curr].status === 'confirmed' ? 'confirmed' : 'apologized'">
+                                          <!-- Check Icon -->
+                                          <svg x-show="list[curr].status === 'confirmed'" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                                          </svg>
+                                          <!-- X Icon -->
+                                          <svg x-show="list[curr].status === 'apologized'" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M6 18L18 6M6 6l12 12" />
+                                          </svg>
+                                     </div>
+                                     <div class="rsvp-details">
+                                         <div class="rsvp-text">
+                                            <span x-text="list[curr].name"></span> 
+                                            <span x-text="list[curr].status === 'confirmed' ? 'confirmed attendance' : 'apologized'"
+                                                  :class="list[curr].status === 'confirmed' ? 'confirmed' : 'apologized'"></span>
+                                         </div>
+                                         <div class="rsvp-subtext" x-text="list[curr].guests === 'Apologized' ? list[curr].sub : '✨ ' + list[curr].guests"></div>
+                                     </div>
+                                 </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3: QR Entry Badge (Bottom Right) -->
+                        <div class="float-card-3">
+                            <div class="animate-hero-float-3">
+                                <div class="qr-sim-card">
+                                    <div class="qr-icon-bg">
+                                        <svg fill="currentColor" viewBox="0 0 16 16">
+                                            <path d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1h-3zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5zM.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5zM4.5 5.5a.5.5 0 0 1 .5.5v4.5a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-4.5a.5.5 0 0 1 .5-.5h1zm2.5 0a.5.5 0 0 1 .5.5v4.5a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-4.5a.5.5 0 0 1 .5-.5h1zm2.5 0a.5.5 0 0 1 .5.5v4.5a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-4.5a.5.5 0 0 1 .5-.5h1zm2.5 0a.5.5 0 0 1 .5.5v4.5a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-4.5a.5.5 0 0 1 .5-.5h1z"/>
+                                        </svg>
+                                    </div>
+                                    <div class="qr-details">
+                                        <div class="qr-label">Entry Barcode</div>
+                                        <div class="qr-title">VIP Access</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="steps-section">
+            <div class="container">
+                <div class="section-title-wrapper">
+                    <span class="section-badge">How It Works</span>
+                    <h2 class="section-title">Three Simple Steps... and Your Event is Ready</h2>
+                </div>
+
+                <div class="steps-grid">
+                    <!-- Connector line behind steps -->
+                    <div class="steps-grid-connector"></div>
+
+                    <!-- Step 1 -->
+                    <div class="step-card">
+                        <div class="step-icon-circle">
+                            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                            </svg>
+                        </div>
+                        <h3>Upload Your Design</h3>
+                        <p>Upload your custom invitation design or browse our premium library to choose the perfect card layout.</p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="step-card">
+                        <div class="step-icon-circle">
+                            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                            </svg>
+                        </div>
+                        <h3>Add Your Guests</h3>
+                        <p>Import your guest list instantly by uploading an Excel file directly to our secure platform.</p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="step-card">
+                        <div class="step-icon-circle">
+                            <img src="https://da3wa.online/images/whatsappicon.svg" alt="WhatsApp">
+                        </div>
+                        <h3>Send Invitations</h3>
+                        <p>With one click, our platform delivers beautiful personalized e-invitations to all your guests via WhatsApp.</p>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="step-card">
+                        <div class="step-icon-circle">
+                            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 14.5l-3.197.618C8.136 15.247 7.5 15.69 7.5 16.32v.512c0 1.258 1.488 2.056 2.583 1.55l3.873-1.8c.874-.406 1.156-1.553.51-2.146l-1.922-1.782z" />
+                            </svg>
+                        </div>
+                        <h3>Track RSVPs</h3>
+                        <p>See exactly who is attending, who apologized, or who hasn't replied yet—live on your clean dashboard 👌</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features-section">
+            <div class="container">
+                <div class="section-title-wrapper">
+                    <span class="section-badge">Features</span>
+                    <h2 class="section-title">Everything You Need to Host the Perfect Event</h2>
+                    <p class="section-subtitle">Powerful tools designed to make event planning simple, elegant, and stress-free.</p>
+                </div>
+
+                <div class="features-grid">
+                    <!-- Feature 1 -->
+                    <div class="feature-box wa-feat">
+                        <div class="feature-glow"></div>
+                        <div class="feature-icon-wrapper">
+                            <img src="https://da3wa.online/images/whatsappicon.svg" alt="WhatsApp">
+                        </div>
+                        <h3>Send via WhatsApp</h3>
+                        <p>Deliver digital invitations directly to guests' WhatsApp with built-in RSVP responses from the same chat window.</p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="feature-box rem-feat">
+                        <div class="feature-glow"></div>
+                        <div class="feature-icon-wrapper">
+                            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                            </svg>
+                        </div>
+                        <h3>Automated Reminders</h3>
+                        <p>Schedule automatic reminder messages to increase turnout and confirm final numbers without lifting a finger.</p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="feature-box stats-feat">
+                        <div class="feature-glow"></div>
+                        <div class="feature-icon-wrapper">
+                            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 14.5l-3.197.618C8.136 15.247 7.5 15.69 7.5 16.32v.512c0 1.258 1.488 2.056 2.583 1.55l3.873-1.8c.874-.406 1.156-1.553.51-2.146l-1.922-1.782z" />
+                            </svg>
+                        </div>
+                        <h3>Live Analytics</h3>
+                        <p>Monitor confirmations and guest reports in real time from a single, beautifully organized control center.</p>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div class="feature-box sec-feat">
+                        <div class="feature-glow"></div>
+                        <div class="feature-icon-wrapper">
+                            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                            </svg>
+                        </div>
+                        <h3>Privacy & Security</h3>
+                        <p>Fully secure digital invitation hosting with encrypted data transmission to guarantee guest list privacy.</p>
+                    </div>
+                </div>
+
+                <div class="feature-card-cta">
+                    <a href="https://lovescript.online/register" class="btn-cta-primary btn-cta-pulse" style="display:inline-flex;">
+                        Start Organizing Your Event Now
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Showcase Section -->
+        <section id="showcase" class="showcase-section">
+            <div class="container">
+                <div class="section-title-wrapper">
+                    <span class="section-badge">Design Library</span>
+                    <h2 class="section-title">Choose From Our Premium Masterpieces</h2>
+                </div>
+
+                <div class="showcase-slider-container">
+                    <div class="showcase-track">
+                        <!-- Card 1 -->
+                        <div class="showcase-card">
+                            <img src="https://da3wa.online/storage/showcase/mgYLTO1soo0BI9892xTNN5eTSTr9parlUKoPqjZ5.png" alt="Elegant Pink" class="showcase-img">
+                            <div class="showcase-details">
+                                <h3>Elegant Pink</h3>
+                                <p>Wedding</p>
+                            </div>
+                            <div class="showcase-overlay">
+                                <a href="https://wa.me/966567714764?text=I%20would%20like%20to%20order%20the%20Elegant%20Pink%20design" target="_blank" class="btn-showcase-request">
+                                    <svg fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                                    <span>Request Design</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="showcase-card">
+                            <img src="https://da3wa.online/storage/showcase/i6KVckMg9BLVQaAK5PwpRTJxSghr2SFHdbguRzEw.png" alt="Black Gold" class="showcase-img">
+                            <div class="showcase-details">
+                                <h3>Gold & Black</h3>
+                                <p>Wedding Invitation</p>
+                            </div>
+                            <div class="showcase-overlay">
+                                <a href="https://wa.me/966567714764?text=I%20would%20like%20to%20order%20the%20Gold%20Black%20design" target="_blank" class="btn-showcase-request">
+                                    <svg fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                                    <span>Request Design</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="showcase-card">
+                            <img src="https://da3wa.online/storage/showcase/ohWURGrWlbIWWoaqt5SCV5UZ0geJsfz7fPZ0o4Pn.jpg" alt="Gold White" class="showcase-img">
+                            <div class="showcase-details">
+                                <h3>Gold & White</h3>
+                                <p>Engagement Invitation</p>
+                            </div>
+                            <div class="showcase-overlay">
+                                <a href="https://wa.me/966567714764?text=I%20would%20like%20to%20order%20the%20Gold%20White%20design" target="_blank" class="btn-showcase-request">
+                                    <svg fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                                    <span>Request Design</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="showcase-card">
+                            <img src="https://da3wa.online/storage/showcase/WS1w1PgqXUcw22TFqBXHPCEajhsI9MP7VhIgjMVx.png" alt="Blue Newborn" class="showcase-img">
+                            <div class="showcase-details">
+                                <h3>Blue Newborn</h3>
+                                <p>Newborn Celebration</p>
+                            </div>
+                            <div class="showcase-overlay">
+                                <a href="https://wa.me/966567714764?text=I%20would%20like%20to%20order%20the%20Blue%20Newborn%20design" target="_blank" class="btn-showcase-request">
+                                    <svg fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                                    <span>Request Design</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Card 5 -->
+                        <div class="showcase-card">
+                            <img src="https://da3wa.online/storage/showcase/r0P0cK9ajVOBIbAOhli2jK8UKZjT1OvZspkzhe7t.png" alt="Classic Orange" class="showcase-img">
+                            <div class="showcase-details">
+                                <h3>Classic Orange</h3>
+                                <p>Wedding Event</p>
+                            </div>
+                            <div class="showcase-overlay">
+                                <a href="https://wa.me/966567714764?text=I%20would%20like%20to%20order%20the%20Classic%20Orange%20design" target="_blank" class="btn-showcase-request">
+                                    <svg fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                                    <span>Request Design</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-card-cta" style="margin-top: 3rem;">
+                    <a href="https://lovescript.online/register" class="btn-designs-more">
+                        Request Custom Invitation
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="pricing-section">
+            <div class="container">
+                <div class="section-title-wrapper">
+                    <span class="section-badge">Packages</span>
+                    <h2 class="section-title">Packages Tailored for Everyone</h2>
+                    <p class="section-subtitle">Invest in your peace of mind and choose the package that suits you best</p>
+                </div>
+
+                <div class="pricing-grid">
+                    <!-- Package 1: Golden (Recommended) -->
+                    <div class="pricing-card highlighted">
+                        <div class="badge-recommended">Most Popular</div>
+                        <div class="pricing-header">
+                            <h3>Golden Plan</h3>
+                            <div class="pricing-price-row">
+                                <span class="price-val">0.99</span>
+                                <span class="price-unit">USD / guest</span>
+                            </div>
+                        </div>
+
+                        <ul class="pricing-features-list">
+                            <li>
+                                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>Send video or image invitations</span>
+                            </li>
+                            <li>
+                                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>Send invitations automatically via WhatsApp</span>
+                            </li>
+                            <li>
+                                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>RSVP confirmation directly from WhatsApp</span>
+                            </li>
+                            <li>
+                                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>Automatic guest reminders</span>
+                            </li>
+                            <li>
+                                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>Dashboard & event statistics</span>
+                            </li>
+                            <li>
+                                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>24/7 direct support (WhatsApp)</span>
+                            </li>
+                        </ul>
+
+                        <a href="https://lovescript.online/register" class="btn-pricing-action">
+                            Choose Plan
+                        </a>
+                    </div>
+
+                    <!-- Package 2: Diamond -->
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3>Diamond Plan</h3>
+                            <div class="pricing-price-row">
+                                <span class="price-val">1.36</span>
+                                <span class="price-unit">USD / guest</span>
+                            </div>
+                        </div>
+
+                        <ul class="pricing-features-list">
+                            <li>
+                                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>Personalized entry Barcode/QR for each guest</span>
+                            </li>
+                            <li>
+                                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>Smart, advanced free reminders</span>
+                            </li>
+                            <li>
+                                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>Dedicated account manager for your event</span>
+                            </li>
+                            <li>
+                                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>Web app for scanning barcodes at the door</span>
+                            </li>
+                            <li>
+                                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>Apple Wallet & Google Wallet integration</span>
+                            </li>
+                            <li>
+                                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>Includes all Golden Plan features +</span>
+                            </li>
+                        </ul>
+
+                        <a href="https://lovescript.online/register" class="btn-pricing-action">
+                            Choose Plan
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Secure Payment Methods -->
+                <div class="payment-methods-wrapper">
+                    <p>Secure Payment Methods</p>
+                    <div class="payment-methods-grid">
+                        <img src="https://da3wa.online/images/payment/apple-pay.svg" alt="Apple Pay" class="apple-pay">
+                        <img src="https://www.mastercard.com.au/content/dam/public/mastercardcom/au/en/consumers/icons/google-pay-logo_1280x531.png" alt="Google Pay" class="google-pay">
+                        <img src="https://da3wa.online/images/payment/visamaster.svg" alt="Visa & Mastercard" class="visamaster">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials (Moving Marquee) -->
+        <section class="reviews-section">
+            <div class="container">
+                <div class="section-title-wrapper">
+                    <span class="section-badge">Success Stories</span>
+                    <h2 class="section-title">Clients Who Shared Their Joy With Us</h2>
+                </div>
+
+                <div class="reviews-marquee-wrapper">
+                    <div class="reviews-marquee-track-reverse">
+                        <!-- Card 1 -->
+                        <div class="review-card">
+                            <div class="card-glow-bg"></div>
+                            <div class="review-stars">★★★★★</div>
+                            <p class="review-quote">"Honestly, you did an amazing job. The invitation was neat, easy, and all the guests praised it 👌"</p>
+                            <div class="review-author-row">
+                                <div class="review-avatar-placeholder">M</div>
+                                <span>Mohammed Al-Subaie</span>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="review-card">
+                            <div class="card-glow-bg"></div>
+                            <div class="review-stars">★★★★★</div>
+                            <p class="review-quote">"It saved the bride a lot of effort, and everything was clear and simple to confirm."</p>
+                            <div class="review-author-row">
+                                <div class="review-avatar-placeholder">S</div>
+                                <span>Sarah Al-Qahtani</span>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="review-card">
+                            <div class="card-glow-bg"></div>
+                            <div class="review-stars">★★★★★</div>
+                            <p class="review-quote">"Guests loved the barcode check-in concept at the door. Very elegant and organized."</p>
+                            <div class="review-author-row">
+                                <div class="review-avatar-placeholder">A</div>
+                                <span>Abdullah Al-Mutairi</span>
+                            </div>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="review-card">
+                            <div class="card-glow-bg"></div>
+                            <div class="review-stars">★★★★★</div>
+                            <p class="review-quote">"You saved us the headache of phone calls and follow-ups. Everything was online and guaranteed 👍"</p>
+                            <div class="review-author-row">
+                                <div class="review-avatar-placeholder">M</div>
+                                <span>May Al-Kaabi</span>
+                            </div>
+                        </div>
+
+                        <!-- Card 5 -->
+                        <div class="review-card">
+                            <div class="card-glow-bg"></div>
+                            <div class="review-stars">★★★★★</div>
+                            <p class="review-quote">"A wonderful and fast experience, and customer service on WhatsApp is extremely responsive."</p>
+                            <div class="review-author-row">
+                                <div class="review-avatar-placeholder">K</div>
+                                <span>Khalid Al-Anazi</span>
+                            </div>
+                        </div>
+
+                        <!-- Repeat for seamless loop -->
+                        <!-- Card 1 copy -->
+                        <div class="review-card">
+                            <div class="card-glow-bg"></div>
+                            <div class="review-stars">★★★★★</div>
+                            <p class="review-quote">"Honestly, you did an amazing job. The invitation was neat, easy, and all the guests praised it 👌"</p>
+                            <div class="review-author-row">
+                                <div class="review-avatar-placeholder">M</div>
+                                <span>Mohammed Al-Subaie</span>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 copy -->
+                        <div class="review-card">
+                            <div class="card-glow-bg"></div>
+                            <div class="review-stars">★★★★★</div>
+                            <p class="review-quote">"It saved the bride a lot of effort, and everything was clear and simple to confirm."</p>
+                            <div class="review-author-row">
+                                <div class="review-avatar-placeholder">S</div>
+                                <span>Sarah Al-Qahtani</span>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 copy -->
+                        <div class="review-card">
+                            <div class="card-glow-bg"></div>
+                            <div class="review-stars">★★★★★</div>
+                            <p class="review-quote">"Guests loved the barcode check-in concept at the door. Very elegant and organized."</p>
+                            <div class="review-author-row">
+                                <div class="review-avatar-placeholder">A</div>
+                                <span>Abdullah Al-Mutairi</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="var(--accent-gold)" style="width: 2rem; height: 2rem; flex-shrink: 0;">
+                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                    </svg>
+                    <span style="font-family: var(--font-heading); font-size: 1.625rem; font-weight: 500; color: var(--text-primary); letter-spacing: -0.02em; line-height: 1;">LoveScript</span>
+                </div>
+                <p>
+                    Making event planning simple, elegant, and stress-free for everyone.
+                </p>
+            </div>
+            
+            <div class="footer-links-col">
+                <h4>Love Script Platform</h4>
+                <ul>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="container footer-bottom">
+            <div class="footer-copy">
+                <p>&copy; 2026 Love Script. All rights reserved.</p>
+                <p class="footer-creator">A product of Barmejon.com</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/966567714764" target="_blank" class="whatsapp-floating-btn" aria-label="Contact us on WhatsApp">
+         <img src="https://da3wa.online/images/whatsappwhite.svg" alt="WhatsApp">
+    </a>
+    
+</body>
+</html>

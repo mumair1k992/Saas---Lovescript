@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- SEO Meta Tags -->
+    <title>Pricing Plans - LoveScript | Send WhatsApp Invitations with Barcode</title>
+    <meta name="description" content="View pricing plans for LoveScript. Compare our Golden and Diamond plans to automate WhatsApp invitations, live RSVPs, and entry barcode check-ins.">
+    <meta name="keywords" content="digital invitation pricing, event packages, barcode invitations, guest rsvp pricing, lovescript packages">
+    
+    <link rel="canonical" href="https://lovescript.online/pricing">
+    
+    <!-- Prefetch adjacent pages for instant loading -->
+    <link rel="prefetch" href="index.html">
+    <link rel="prefetch" href="features.html">
+    <link rel="prefetch" href="contact.html">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Alpine.js for interactions -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body x-data="{ mobileMenuOpen: false, scrolled: false }" @scroll.window="scrolled = (window.pageYOffset > 20)">
+    
+    <!-- Page Loader -->
+    <div id="page-loader">
+        <div class="loader-container">
+             <div class="loader-ripple"></div>
+             <div class="loader-ripple"></div>
+             <div class="loader-ripple"></div>
+             <div class="loader-spinner-elegant"></div>
+             <div class="loader-logo" style="width: auto !important; display: flex; align-items: center; gap: 0.75rem; filter: drop-shadow(0 10px 15px rgba(245, 158, 11, 0.25)); border: none; background: transparent;">
+                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="var(--accent-gold)" style="width: 3.5rem; height: 3.5rem;">
+                     <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                 </svg>
+                 <span style="font-family: var(--font-heading); font-size: 2.5rem; font-weight: 500; color: var(--text-primary); letter-spacing: -0.02em; line-height: 1;">LoveScript</span>
+             </div>
+             <div class="loader-text">
+                 LOVE SCRIPT <span>.</span><span>.</span><span>.</span>
+             </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const loader = document.getElementById('page-loader');
+            if(loader) loader.classList.add('hidden-loader');
+        });
+    </script>
+
+    <!-- Background Texture -->
+    <div class="fixed-bg-texture"></div>
+    <div class="fixed-bg-color"></div>
+
+    <!-- Navbar -->
+    <nav :class="{ 'scrolled': scrolled }">
+        <div class="nav-container">
+            <!-- Logo -->
+            <a href="index.html" class="logo-link" aria-label="LoveScript - Home">
+                <div class="logo-wrapper" style="display: flex; align-items: center; gap: 0.5rem;">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="var(--accent-gold)" style="width: 2rem; height: 2rem; flex-shrink: 0;">
+                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                    </svg>
+                    <span style="font-family: var(--font-heading); font-size: 1.625rem; font-weight: 500; color: var(--text-primary); letter-spacing: -0.02em; line-height: 1;">LoveScript</span>
+                </div>
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="desktop-menu">
+                <a href="index.html">Home</a>
+                <a href="features.html">Features</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+
+            <!-- Actions -->
+            <div class="nav-actions">
+                <a href="https://lovescript.online/login" class="btn-login">Login</a>
+                <a href="https://lovescript.online/register" class="btn-primary btn-cta-pulse">Get Started</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button @click="mobileMenuOpen = !mobileMenuOpen" class="mobile-menu-btn" aria-label="Toggle Menu">
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path x-show="!mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    <path x-show="mobileMenuOpen" x-cloak stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div x-show="mobileMenuOpen" x-cloak class="mobile-menu-dropdown">
+            <!-- Menu Links -->
+            <div class="mobile-links">
+                <a href="index.html" @click="mobileMenuOpen = false">Home</a>
+                <a href="features.html" @click="mobileMenuOpen = false">Features</a>
+                <a href="pricing.html" @click="mobileMenuOpen = false">Pricing</a>
+                <a href="contact.html" @click="mobileMenuOpen = false">Contact Us</a>
+            </div>
+            
+            <!-- Auth Buttons -->
+            <div class="mobile-auth">
+                <a href="https://lovescript.online/login" class="mobile-login">Login</a>
+                <a href="https://lovescript.online/register" class="mobile-start">Get Started</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Content -->
+    <main>
+        <!-- Page Title Banner -->
+        <div class="page-title-banner">
+            <div class="container">
+                <h1>Packages & Pricing</h1>
+                <p>Choose the perfect package for your event and invest in a stress-free, luxurious guest management experience.</p>
+            </div>
+        </div>
+
+        <!-- Pricing Section -->
+        <div class="py-20 bg-white" style="padding: 5rem 0;">
+            <div class="container">
+                <div class="pricing-grid">
+                    
+                    <!-- Package 1: Golden (Recommended) -->
+                    <div class="pricing-card highlighted">
+                        <div class="badge-recommended">Most Popular</div>
+                        <div class="pricing-header">
+                            <h3>Golden Plan</h3>
+                            <div class="pricing-price-row">
+                                <span class="price-val">0.99</span>
+                                <span class="price-unit">USD / guest</span>
+                            </div>
+                        </div>
+
+                        <ul class="pricing-features-list">
+                            <li>
+                                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>Send video or image invitations</span>
+                            </li>
+                            <li>
+                                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>Send invitations automatically via WhatsApp</span>
+                            </li>
+                            <li>
+                                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>RSVP confirmation directly from WhatsApp</span>
+                            </li>
+                            <li>
+                                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>Automatic guest reminders</span>
+                            </li>
+                            <li>
+                                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>Dashboard & event statistics</span>
+                            </li>
+                            <li>
+                                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>24/7 direct support (WhatsApp)</span>
+                            </li>
+                        </ul>
+
+                        <a href="https://lovescript.online/register" class="btn-pricing-action">
+                            Choose Golden Plan
+                        </a>
+                    </div>
+
+                    <!-- Package 2: Diamond -->
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3>Diamond Plan</h3>
+                            <div class="pricing-price-row">
+                                <span class="price-val">1.36</span>
+                                <span class="price-unit">USD / guest</span>
+                            </div>
+                        </div>
+
+                        <ul class="pricing-features-list">
+                            <li>
+                                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>Personalized entry Barcode/QR for each guest</span>
+                            </li>
+                            <li>
+                                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>Smart, advanced free reminders</span>
+                            </li>
+                            <li>
+                                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>Dedicated account manager for your event</span>
+                            </li>
+                            <li>
+                                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>Web app for scanning barcodes at the door</span>
+                            </li>
+                            <li>
+                                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>Apple Wallet & Google Wallet integration</span>
+                            </li>
+                            <li>
+                                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>Includes all Golden Plan features +</span>
+                            </li>
+                        </ul>
+
+                        <a href="https://lovescript.online/register" class="btn-pricing-action">
+                            Choose Diamond Plan
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Secure Payment Methods -->
+                <div class="payment-methods-wrapper">
+                    <p>Secure Payment Methods</p>
+                    <div class="payment-methods-grid">
+                        <img src="https://da3wa.online/images/payment/apple-pay.svg" alt="Apple Pay" class="apple-pay">
+                        <img src="https://www.mastercard.com.au/content/dam/public/mastercardcom/au/en/consumers/icons/google-pay-logo_1280x531.png" alt="Google Pay" class="google-pay">
+                        <img src="https://da3wa.online/images/payment/visamaster.svg" alt="Visa & Mastercard" class="visamaster">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="var(--accent-gold)" style="width: 2rem; height: 2rem; flex-shrink: 0;">
+                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                    </svg>
+                    <span style="font-family: var(--font-heading); font-size: 1.625rem; font-weight: 500; color: var(--text-primary); letter-spacing: -0.02em; line-height: 1;">LoveScript</span>
+                </div>
+                <p>
+                    Making event planning simple, elegant, and stress-free for everyone.
+                </p>
+            </div>
+            
+            <div class="footer-links-col">
+                <h4>Love Script Platform</h4>
+                <ul>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="container footer-bottom">
+            <div class="footer-copy">
+                <p>&copy; 2026 Love Script. All rights reserved.</p>
+                <p class="footer-creator">A product of Barmejon.com</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/966567714764" target="_blank" class="whatsapp-floating-btn" aria-label="Contact us on WhatsApp">
+         <img src="https://da3wa.online/images/whatsappwhite.svg" alt="WhatsApp">
+    </a>
+</body>
+</html>
